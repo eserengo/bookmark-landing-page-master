@@ -1,6 +1,6 @@
 const Link = ({ className, href, children }) => {
 
-  const onClick = (event) => {
+  const handleClick = (event) => {
     if (event.metaKey || event.ctrlKey) {                  // if ctrl or meta key are held on click, 
       return;                                              // allow default behavior of opening link in new tab
     }        
@@ -12,9 +12,8 @@ const Link = ({ className, href, children }) => {
     window.dispatchEvent(new PopStateEvent('popstate'));   // communicate to Routes that URL has changed
   };
 
-
   return (
-    <a className={className} href={href} onClick={onClick} >
+    <a className={className} href={href} onClick={handleClick} >
       {children}
     </a>
   );
