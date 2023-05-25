@@ -77,12 +77,11 @@ const SignIn = () => {
                 :
                 <Button variant='primary' className='text-uppercase px-5 py-2 mt-4 mb-2' content='sign in' onClick={(event) => handleSubmit(event)} />
             }
-            {/* <Button variant='primary' className='text-uppercase px-5 py-2 mt-4 mb-2' content='sign in' onClick={(event) => handleSubmit(event)} /> */}
           </ReactBootstrap.Form>
         </ReactBootstrap.Card.Body>
       </ReactBootstrap.Card>
     </div>
-  )
-};
+  );
+}
 
 export default SignIn;

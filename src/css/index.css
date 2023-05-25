@@ -27,7 +27,75 @@ ul, li {
   list-style-type: none;
 }
 
+.title {
+  color: var(--VeryDarkBlue);
+}
 
+.para {
+  color: var(--GrayishBlue);
+}
+
+.para {
+  font-size: 90%;
+}
+
+.btn,
+.link,
+.features .nav-link {
+  font-size: 70%;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--VeryDarkBlue);
+}
+
+.link:hover {
+  color: var(--SoftRed);
+  border-bottom: 2px solid var(--SoftRed);
+}
+
+.btn {
+  border-radius: 4px;
+}
+
+.btn:hover {
+  box-shadow: 0px 1px 2px var(--GrayishBlue);
+}
+
+.btn-primary {
+  color: var(--White);
+  background-color: var(--SoftBlue);
+  border: 1px solid var(--SoftBlue);
+}
+
+.btn-primary:hover {
+  color: var(--SoftBlue);
+  background-color: var(--White);
+}
+
+.btn-secondary {
+  color: var(--White);
+  background-color: var(--GrayishBlue);
+  border: 1px solid var(--GrayishBlue);
+}
+
+.btn-secondary:hover {
+  color: var(--VeryDarkBlue);
+  background-color: var(--White);
+  border: 1px solid var(--VeryDarkBlue);
+}
+
+.btn.link {
+  color: var(--White);
+  background-color: var(--SoftRed);
+  border: 1px solid var(--SoftRed);
+}
+
+.btn.link:hover {
+  color: var(--SoftRed);
+  background-color: var(--White);
+}
 
 .success {
   color: var(--SoftGreen);
