@@ -27,6 +27,24 @@ ul, li {
   list-style-type: none;
 }
 
+
+
+.success {
+  color: var(--SoftGreen);
+}
+
+.error {
+  color: var(--SoftRed);
+}
+
+.validated {
+  border: 2px solid var(--SoftGreen) !important;
+}
+
+.not__validated {
+  border: 2px solid var(--SoftRed) !important;
+}
+
 /* svg:hover {
   filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(deg) brightness(100%) contrast(100%);
 } */
