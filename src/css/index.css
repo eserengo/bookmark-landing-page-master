@@ -27,6 +27,10 @@ ul, li {
   list-style-type: none;
 }
 
+.icon {
+  cursor: pointer;
+}
+
 .title {
   color: var(--VeryDarkBlue);
 }
@@ -41,7 +45,8 @@ ul, li {
 
 .btn,
 .link,
-.features .nav-link {
+:where(.features__section, .features__page) .nav-link,
+.signin__page :is(.form-label, .form-control, .form-check-label, .error, .success) {
   font-size: 70%;
 }
 
@@ -111,6 +116,11 @@ ul, li {
 
 .not__validated {
   border: 2px solid var(--SoftRed) !important;
+}
+
+.form-check-input {
+  float: none !important;
+  margin: 4px 4px 0px 0px !important;
 }
 
 /* svg:hover {

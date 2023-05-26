@@ -6,7 +6,7 @@ import Attribution from "./Attribution__BS.js";
 const Home = () => {
 
   const Intro = () => (
-    <section className='intro row'>
+    <section className='intro__section row'>
       <div className='col-12 col-sm-6 order-sm-1'>
         <ReactBootstrap.Image className='hero__img' alt='hero illustration' src='./src/images/illustration-hero.svg' />
       </div>
@@ -23,7 +23,7 @@ const Home = () => {
   );
 
   const Features = () => (
-    <section className='features row'>
+    <section className='features__section row'>
       <div className='col-12 text-center'>
         <h2 className='title secondary'>Features</h2>
         <p className='para'>Our aim is to make it quick and easy for you to access your favourite websites.
@@ -36,7 +36,7 @@ const Home = () => {
   );
 
   return (
-    <div className='home'>
+    <div className='home__page'>
       <NavWithModal />
       <main className='main container-fluid'>
         <Intro />
