@@ -1,6 +1,7 @@
 import Button from "./Button";
 import NavWithModal from "./NavWithModal__BS";
 import Tabs from "./Tabs";
+import Cards from "./Cards";
 import Attribution from "./Attribution__BS.js";
 
 const Home = () => {
@@ -35,12 +36,26 @@ const Home = () => {
     </section>
   );
 
+  const Download = () => (
+    <section className='download__section row'>
+      <div className='col-12 text-center'>
+        <h2 className='title secondary'>Download the extension</h2>
+        <p className='para'>We’ve got more browsers in the pipeline. Please do let us know if you’ve
+          got a favourite you’d like us to prioritize.</p>
+      </div>
+      <div className='col-12 d-flex flex-column flex-sm-row'>
+        <Cards />
+      </div>
+    </section>
+  );
+
   return (
     <div className='home__page'>
       <NavWithModal />
       <main className='main container-fluid'>
         <Intro />
         <Features />
+        <Download />
       </main>
       <Attribution />
     </div>

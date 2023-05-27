@@ -31,22 +31,31 @@ ul, li {
   cursor: pointer;
 }
 
-.title {
+.title,
+.card-title {
   color: var(--VeryDarkBlue);
 }
 
-.para {
+.para,
+.card-text {
   color: var(--GrayishBlue);
 }
 
-.para {
+.card-title {
+  font-size: 100%;
+}
+
+.para,
+.attribution span > a {
   font-size: 90%;
 }
 
 .btn,
 .link,
 :where(.features__section, .features__page) .nav-link,
-.signin__page :is(.form-label, .form-control, .form-check-label, .error, .success) {
+.card-text,
+.signin__page :is(.form-label, .form-control, .form-check-label, .error, .success),
+.attribution span {
   font-size: 70%;
 }
 
@@ -122,6 +131,7 @@ ul, li {
   float: none !important;
   margin: 4px 4px 0px 0px !important;
 }
+
 
 /* svg:hover {
   filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(deg) brightness(100%) contrast(100%);

@@ -16,7 +16,7 @@ const NavWithModal = () => {
   ];
 
   const Logo = () => (
-    <ReactBootstrap.Navbar.Brand><ReactBootstrap.Image className='logo' alt='logo' src='./src/images/logo-bookmark.svg' /></ReactBootstrap.Navbar.Brand>
+    <ReactBootstrap.Navbar.Brand><ReactBootstrap.Image className='bookmark__logo' alt='bookmark logo' src='./src/images/logo-bookmark.svg' /></ReactBootstrap.Navbar.Brand>
   );
 
   return (
