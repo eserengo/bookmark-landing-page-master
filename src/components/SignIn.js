@@ -81,30 +81,27 @@ const SignIn = () => {
           <ReactBootstrap.Image className='icon float-end mt-1' alt='close icon' src='./src/images/icon-close.svg' onClick={(event) => goHome(event)} />
           <ReactBootstrap.Card.Title className='text-uppercase'>sign in</ReactBootstrap.Card.Title>
           <ReactBootstrap.Form className='d-flex flex-column justify-content-center align-items-center'>
-            <ReactBootstrap.Form.Group className='email-group w-100'>
+            <ReactBootstrap.Form.Group className='email__group w-100 position-relative'>
               <ReactBootstrap.Form.Label htmlFor={emailRef.current}>Email</ReactBootstrap.Form.Label>
               <ReactBootstrap.Form.Control ref={emailRef} type='email' className='px-3 py-2' name='email' autoComplete='off' />
-              {state.isEmailValidated && <ReactBootstrap.Form.Text className='success ms-1'>Accepted</ReactBootstrap.Form.Text>}
-              {(!state.isEmailValidated && emailRef.current != null) && <ReactBootstrap.Form.Text className='error ms-1'>Please enter a valid email</ReactBootstrap.Form.Text>}
+              { state.isEmailValidated && <ReactBootstrap.Form.Text className='success ms-1'>Accepted</ReactBootstrap.Form.Text> }
+              { !state.isEmailValidated && emailRef.current != null && <ReactBootstrap.Form.Text className='error ms-1'>Please enter a valid email</ReactBootstrap.Form.Text> }
+              { !state.isEmailValidated && emailRef.current != null && <ReactBootstrap.Image className='error icon position-absolute' alt='error icon' src='./src/images/icon-error.svg' /> }
             </ReactBootstrap.Form.Group>
-            <ReactBootstrap.Form.Group className='password-group w-100 mt-3'>
+            <ReactBootstrap.Form.Group className='password__group w-100 mt-3 position-relative'>
               <ReactBootstrap.Form.Label htmlFor={passwordRef.current}>Password</ReactBootstrap.Form.Label>
               <ReactBootstrap.Form.Control ref={passwordRef} type='password' className='px-3 py-2' name='password' autoComplete='off' />
-              {state.isPasswordValidated && <ReactBootstrap.Form.Text className='success ms-1'>Accepted</ReactBootstrap.Form.Text>}
-              {(!state.isPasswordValidated && passwordRef.current != null) && <ReactBootstrap.Form.Text className='error ms-1'>Please enter a valid password</ReactBootstrap.Form.Text>}
+              { state.isPasswordValidated && <ReactBootstrap.Form.Text className='success ms-1'>Accepted</ReactBootstrap.Form.Text> }
+              { !state.isPasswordValidated && passwordRef.current != null && <ReactBootstrap.Form.Text className='error ms-1'>Please enter a valid password</ReactBootstrap.Form.Text>}
+              { !state.isPasswordValidated && passwordRef.current != null && <ReactBootstrap.Image className='error icon position-absolute' alt='error icon' src='./src/images/icon-error.svg' /> }
             </ReactBootstrap.Form.Group>
-            <ReactBootstrap.Form.Group className='checkbox-group w-100 mt-3'>
+            <ReactBootstrap.Form.Group className='checkbox__group w-100 mt-3 position-relative'>
               <ReactBootstrap.Form.Check ref={checkboxRef} type='checkbox' className='m-0 p-0' name='checkbox' label='I accept Terms and Conditions' />
-              {/* <br /> */}
-              {state.isCheckboxChecked && <ReactBootstrap.Form.Text className='success ms-1'>Accepted</ReactBootstrap.Form.Text>}
-              {(!state.isCheckboxChecked && checkboxRef.current != null) && <ReactBootstrap.Form.Text className='error ms-1'>Please accept Terms and Conditions</ReactBootstrap.Form.Text>}
+              { state.isCheckboxChecked && <ReactBootstrap.Form.Text className='success ms-1'>Accepted</ReactBootstrap.Form.Text> }
+              { !state.isCheckboxChecked && checkboxRef.current != null && <ReactBootstrap.Form.Text className='error ms-4'>Please accept Terms and Conditions</ReactBootstrap.Form.Text>}
+              { !state.isCheckboxChecked && checkboxRef.current != null && <ReactBootstrap.Image className='error icon position-absolute' alt='error icon' src='./src/images/icon-error.svg' /> }
             </ReactBootstrap.Form.Group>
-            {
-              (state.isEmailValidated && state.isPasswordValidated && state.isCheckboxChecked) ?
-                <Button variant='primary' className='text-uppercase px-5 py-2 mt-4 mb-2' content='return home' onClick={(event) => goHome(event)} />
-                :
-                <Button variant='primary' className='text-uppercase px-5 py-2 mt-4 mb-2' content='sign in' onClick={(event) => handleSubmit(event)} />
-            }
+            { state.isEmailValidated && state.isPasswordValidated && state.isCheckboxChecked ? <Button variant='primary' className='text-uppercase px-5 py-2 mt-4 mb-2' content='return home' onClick={(event) => goHome(event)} /> : <Button variant='primary' className='text-uppercase px-5 py-2 mt-4 mb-2' content='sign in' onClick={(event) => handleSubmit(event)} /> }
           </ReactBootstrap.Form>
         </ReactBootstrap.Card.Body>
       </ReactBootstrap.Card>

@@ -3,6 +3,7 @@ import NavWithModal from "./NavWithModal__BS";
 import Tabs from "./Tabs";
 import Cards from "./Cards";
 import Accordion from "./Accordion";
+import Contact__Input from "./Contact__Input";
 import Attribution from "./Attribution__BS.js";
 
 const Home = () => {
@@ -66,6 +67,16 @@ const Home = () => {
     </section>
   );
 
+  const Contact = () => (
+    <section className='contact__section row'>
+      <div className='col-12 text-center'>
+        <p className='para secondary text-uppercase'>35,000+ already joined</p>
+        <h3 className='title tertiary'>Stay up-to-date with what we’re doing</h3>
+      </div>
+      <Contact__Input />
+    </section>
+  );
+
   return (
     <div className='home__page'>
       <NavWithModal />
@@ -74,6 +85,7 @@ const Home = () => {
         <Features />
         <Download />
         <Faq />
+        <Contact />
       </main>
       <Attribution />
     </div>

@@ -54,6 +54,8 @@ ul, li {
 .link,
 :where(.features__section, .features__page) .nav-link,
 .card-text,
+.contact__group em,
+.contact__group input,
 .signin__page :is(.form-label, .form-control, .form-check-label, .error, .success),
 .attribution span {
   font-size: 70%;
@@ -130,6 +132,33 @@ ul, li {
 .form-check-input {
   float: none !important;
   margin: 4px 4px 0px 0px !important;
+}
+
+.contact__section {
+  background-color: var(--SoftBlue);
+}
+
+.contact__section .error.icon {
+  top: 16%;
+  right: 4%;
+}
+
+.contact__group {
+  background-color: var(--SoftRed);
+}
+
+.contact__group em {
+  color: var(--White);
+}
+
+:where(.email__group, .password__group) .error.icon {
+  top: 42%;
+  right: 6%;
+}
+
+.checkbox__group .error.icon {
+  top: 56%;
+  left: 0%;
 }
 
 
