@@ -68,7 +68,7 @@ const SignIn = () => {
     checkboxRef.current.checked ? dispatch({ type: 'checkboxChecked' }) : dispatch({});
   };
 
-  const proceedHome = (event) => {
+  const goHome = (event) => {
     event.preventDefault();
     window.history.pushState({}, '', '/Frontendmentor.io/bookmark-landing-page-master/');
     window.location.pathname = '/Frontendmentor.io/bookmark-landing-page-master/';
@@ -78,7 +78,7 @@ const SignIn = () => {
     <div className='signin__page vw-100 vh-100 d-flex justify-content-center align-items-center'>
       <ReactBootstrap.Card>
         <ReactBootstrap.Card.Body>
-          <ReactBootstrap.Image className='icon float-end mt-1' alt='close icon' src='./src/images/icon-close.svg' onClick={(event) => proceedHome(event)} />
+          <ReactBootstrap.Image className='icon float-end mt-1' alt='close icon' src='./src/images/icon-close.svg' onClick={(event) => goHome(event)} />
           <ReactBootstrap.Card.Title className='text-uppercase'>sign in</ReactBootstrap.Card.Title>
           <ReactBootstrap.Form className='d-flex flex-column justify-content-center align-items-center'>
             <ReactBootstrap.Form.Group className='email-group w-100'>
@@ -101,7 +101,7 @@ const SignIn = () => {
             </ReactBootstrap.Form.Group>
             {
               (state.isEmailValidated && state.isPasswordValidated && state.isCheckboxChecked) ?
-                <Button variant='primary' className='text-uppercase px-5 py-2 mt-4 mb-2' content='proceed' onClick={(event) => proceedHome(event)} />
+                <Button variant='primary' className='text-uppercase px-5 py-2 mt-4 mb-2' content='return home' onClick={(event) => goHome(event)} />
                 :
                 <Button variant='primary' className='text-uppercase px-5 py-2 mt-4 mb-2' content='sign in' onClick={(event) => handleSubmit(event)} />
             }

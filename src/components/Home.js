@@ -2,6 +2,7 @@ import Button from "./Button";
 import NavWithModal from "./NavWithModal__BS";
 import Tabs from "./Tabs";
 import Cards from "./Cards";
+import Accordion from "./Accordion";
 import Attribution from "./Attribution__BS.js";
 
 const Home = () => {
@@ -49,6 +50,22 @@ const Home = () => {
     </section>
   );
 
+  const Faq = () => (
+    <section className='faq__section row'>
+      <div className='col-12 text-center'>
+        <h2 className='title secondary'>Frequently Asked Questions</h2>
+        <p className='para'>Here are some of our FAQs. If you have any other questions you’d like
+          answered please feel free to email us.</p>
+      </div>
+      <div className='col-12'>
+        <Accordion />
+      </div>
+      <div className='col-12 text-center'>
+        <Button variant='primary' className='px-3 py-2' content='More Info' />
+      </div>
+    </section>
+  );
+
   return (
     <div className='home__page'>
       <NavWithModal />
@@ -56,6 +73,7 @@ const Home = () => {
         <Intro />
         <Features />
         <Download />
+        <Faq />
       </main>
       <Attribution />
     </div>
