@@ -22,8 +22,8 @@ const Contact__Input = () => {
   },);
 
   return (
-    <div className='col-12 text-center d-flex flex-column flex-sm-row'>
-      <div className='contact__group text-center position-relative rounded-1'>
+    <div className='col-12 d-flex flex-column flex-sm-row justify-content-sm-center'>
+      <div className='contact__group position-relative rounded-1'>
         <input ref={emailRef} type='email' className='w-100 px-3 py-2 rounded-1' name='email' autoComplete='off' />
         <br />
         { isValidated && <em className='success ms-1'>Thank you!</em> }

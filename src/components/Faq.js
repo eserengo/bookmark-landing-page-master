@@ -2,7 +2,8 @@ import Accordion from "./Accordion";
 import Button from "./Button";
 
 const Faq = () => {
-  const goHome = () => {
+  const goHome = (event) => {
+    event.preventDefault();
     window.history.pushState({}, '', '/Frontendmentor.io/bookmark-landing-page-master/');
     window.location.pathname = '/Frontendmentor.io/bookmark-landing-page-master/';
   };
@@ -18,7 +19,7 @@ const Faq = () => {
         <Accordion />
       </div>
       <div className='col-12 text-center'>
-        <Button variant='primary' className='px-3 py-2' content='Return Home' onClick={goHome} />
+        <Button variant='primary' className='px-3 py-2' content='Return Home' onClick={(event) => goHome(event)} />
       </div>
     </div>
   )

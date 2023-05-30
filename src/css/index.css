@@ -61,6 +61,13 @@ ul, li {
   font-size: 70%;
 }
 
+.modal-content {
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(37, 43, 70, 0.5);
+  backdrop-filter: blur(15px);
+}
+
 .link {
   text-decoration: none;
   color: var(--VeryDarkBlue);
@@ -143,6 +150,11 @@ ul, li {
   right: 4%;
 }
 
+.para.secondary,
+.tertiary {
+  color: var(--White);
+}
+
 .contact__group {
   background-color: var(--SoftRed);
 }
@@ -157,11 +169,23 @@ ul, li {
 }
 
 .checkbox__group .error.icon {
-  top: 56%;
+  top: 52%;
   left: 0%;
 }
 
+.footer {
+  background-color: var(--VeryDarkBlue);
+}
 
-/* svg:hover {
-  filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(deg) brightness(100%) contrast(100%);
-} */
+.footer .link {
+  text-decoration: none;
+  color: var(--White);
+}
+
+.footer .link:hover {
+  color: var(--SoftRed);
+}
+
+.social.icon:hover {
+  filter: invert(50%) sepia(100%) saturate(1500%) hue-rotate(320deg) brightness(100%) contrast(200%);
+}

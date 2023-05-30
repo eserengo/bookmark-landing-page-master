@@ -12,7 +12,7 @@ const NavWithModal = () => {
     <Link href='/Frontendmentor.io/bookmark-landing-page-master/' className='link' children='home' />,
     <Link href='/Frontendmentor.io/bookmark-landing-page-master/features' className='link' children='features' />,
     <Link href='/Frontendmentor.io/bookmark-landing-page-master/faq' className='link' children='faq' />,
-    <Link href='/Frontendmentor.io/bookmark-landing-page-master/signin' className='btn link' children='sign in' />,
+    <Link href='/Frontendmentor.io/bookmark-landing-page-master/signin' className='btn link px-4' children='sign in' />,
   ];
 
   const Logo = () => (
