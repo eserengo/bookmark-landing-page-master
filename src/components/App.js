@@ -1,5 +1,7 @@
 import Route from './Route.js';
 import Home from './Home.js';
+import Features from './Features.js';
+import Faq from './Faq.js';
 import SignIn from './SignIn';
 
 const App = () => {
@@ -11,6 +13,12 @@ const App = () => {
       </Route>
       <Route path='/Frontendmentor.io/bookmark-landing-page-master/'>
         <Home />
+      </Route>
+      <Route path='/Frontendmentor.io/bookmark-landing-page-master/features'>
+        <Features />
+      </Route>
+      <Route path='/Frontendmentor.io/bookmark-landing-page-master/faq'>
+        <Faq />
       </Route>
       <Route path='/Frontendmentor.io/bookmark-landing-page-master/signin'>
         <SignIn />

@@ -1,14 +1,97 @@
+import Button from "./Button";
 import NavWithModal from "./NavWithModal__BS";
+import Tabs from "./Tabs";
+import Cards from "./Cards";
+import Accordion from "./Accordion";
+import Contact__Input from "./Contact__Input";
+import FooterNav from "./FooterNav";
 import Attribution from "./Attribution__BS.js";
 
 const Home = () => {
 
+  const Intro = () => (
+    <section className='intro__section row'>
+      <div className='col-12 col-sm-6 order-sm-1'>
+        <ReactBootstrap.Image className='hero__img' alt='hero illustration' src='./src/images/illustration-hero.svg' />
+      </div>
+      <div className='col-12 col-sm-6 order-sm-0 d-flex flex-column align-items-center align-items-sm-start' >
+        <h1 className='title primary' >A Simple Bookmark Manager</h1>
+        <p className='para'>A clean and simple interface to organize your favourite websites. Open a new
+          browser tab and see your sites load instantly. Try it for free.</p>
+        <div className='d-flex flex-row'>
+          <Button variant='primary' className='px-3 py-2' content='Get it on Chrome' />
+          <Button variant='secondary' className='px-3 py-2 ms-3' content='Get it on Firefox' />
+        </div>
+      </div>
+    </section>
+  );
+
+  const Features = () => (
+    <section className='features__section row'>
+      <div className='col-12 text-center'>
+        <h2 className='title secondary'>Features</h2>
+        <p className='para'>Our aim is to make it quick and easy for you to access your favourite websites.
+          Your bookmarks sync between your devices so you can access them on the go.</p>
+      </div>
+      <div className='col-12'>
+        <Tabs />
+      </div>
+    </section>
+  );
+
+  const Download = () => (
+    <section className='download__section row'>
+      <div className='col-12 text-center'>
+        <h2 className='title secondary'>Download the extension</h2>
+        <p className='para'>We’ve got more browsers in the pipeline. Please do let us know if you’ve
+          got a favourite you’d like us to prioritize.</p>
+      </div>
+      <div className='col-12 d-flex flex-column flex-sm-row'>
+        <Cards />
+      </div>
+    </section>
+  );
+
+  const Faq = () => (
+    <section className='faq__section row'>
+      <div className='col-12 text-center'>
+        <h2 className='title secondary'>Frequently Asked Questions</h2>
+        <p className='para'>Here are some of our FAQs. If you have any other questions you’d like
+          answered please feel free to email us.</p>
+      </div>
+      <div className='col-12'>
+        <Accordion />
+      </div>
+      <div className='col-12 text-center'>
+        <Button variant='primary' className='px-3 py-2' content='More Info' />
+      </div>
+    </section>
+  );
+
+  const Contact = () => (
+    <section className='contact__section row m-0'>
+      <div className='col-12 text-center'>
+        <p className='para secondary text-uppercase'>35,000+ already joined</p>
+        <h3 className='title tertiary'>Stay up-to-date with what we’re doing</h3>
+      </div>
+      <Contact__Input />
+    </section>
+  );
+
   return (
-    <div className='home'>
+    <div className='home__page'>
       <NavWithModal />
+      <main className='main container-fluid p-0'>
+        <Intro />
+        <Features />
+        <Download />
+        <Faq />
+        <Contact />
+      </main>
+      <FooterNav />
       <Attribution />
     </div>
   )
-};
+}
 
 export default Home;
