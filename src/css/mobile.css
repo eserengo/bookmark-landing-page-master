@@ -1,3 +1,19 @@
+body {
+  min-width: 275px;
+}
+
 .modal-body .link {
   font-size: 120% !important;
+}
+
+.modal-content {
+  height: 100vh;
+  position: fixed;
+  top: 0%;
+  background-color: rgba(37, 43, 70, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+.download__section .card {
+  margin: 1rem 0rem;
 }

@@ -32,20 +32,68 @@ ul, li {
 }
 
 .title,
-.card-title {
+.link,
+.card-title,
+:where(.features__section, .features__page) .nav-link.active,
+.accordion-button,
+.accordion-button:not(.collapsed),
+.btn-secondary:hover {
   color: var(--VeryDarkBlue);
 }
 
+.link:hover,
+.btn.link:hover,
+.error,
+:where(.features__section, .features__page) .nav-link:not(.active):hover,
+.accordion-button.collapsed:hover,
+.footer .link:hover {
+  color: var(--SoftRed);
+}
+
 .para,
-.card-text {
+.card-text,
+:where(.features__section, .features__page) .nav-link:not(.active),
+.accordion-body {
   color: var(--GrayishBlue);
 }
 
+.success {
+  color: var(--SoftGreen);
+}
+
+.btn-primary,
+.btn-secondary,
+.btn.link,
+.para.secondary,
+.tertiary,
+.contact__group em,
+.footer .link {
+  color: var(--White);
+}
+
+.btn-primary,
+.contact__section {
+  background-color: var(--SoftBlue);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn.link:hover {
+  background-color: var(--White);
+}
+
+.btn.link,
+.contact__group.not__validated {
+  background-color: var(--SoftRed);
+}
+
 .card-title {
-  font-size: 100%;
+  font-size: 100% !important;
 }
 
 .para,
+.accordion-body,
+.footer .link,
 .attribution span > a {
   font-size: 90%;
 }
@@ -61,21 +109,20 @@ ul, li {
   font-size: 70%;
 }
 
-.modal-content {
-  height: 100vh;
-  position: fixed;
-  background-color: rgba(37, 43, 70, 0.5);
-  backdrop-filter: blur(15px);
+.contact__section .para,
+.footer .link {
+  letter-spacing: 1px;
 }
 
-.link {
+.download__section .card,
+.contact__group input,
+:where(.features__section, .features__page) .nav-link {
+  border: none !important;
+}
+
+.link,
+.footer .link {
   text-decoration: none;
-  color: var(--VeryDarkBlue);
-}
-
-.link:hover {
-  color: var(--SoftRed);
-  border-bottom: 2px solid var(--SoftRed);
 }
 
 .btn {
@@ -87,45 +134,24 @@ ul, li {
 }
 
 .btn-primary {
-  color: var(--White);
-  background-color: var(--SoftBlue);
   border: 1px solid var(--SoftBlue);
 }
 
 .btn-primary:hover {
   color: var(--SoftBlue);
-  background-color: var(--White);
 }
 
 .btn-secondary {
-  color: var(--White);
   background-color: var(--GrayishBlue);
   border: 1px solid var(--GrayishBlue);
 }
 
 .btn-secondary:hover {
-  color: var(--VeryDarkBlue);
-  background-color: var(--White);
   border: 1px solid var(--VeryDarkBlue);
 }
 
 .btn.link {
-  color: var(--White);
-  background-color: var(--SoftRed);
   border: 1px solid var(--SoftRed);
-}
-
-.btn.link:hover {
-  color: var(--SoftRed);
-  background-color: var(--White);
-}
-
-.success {
-  color: var(--SoftGreen);
-}
-
-.error {
-  color: var(--SoftRed);
 }
 
 .validated {
@@ -141,8 +167,13 @@ ul, li {
   margin: 4px 4px 0px 0px !important;
 }
 
-.contact__section {
-  background-color: var(--SoftBlue);
+.link:hover,
+:where(.features__section, .features__page) .nav-link.active {
+  border-bottom: 2px solid var(--SoftRed) !important;
+}
+
+.download__section .card {
+  box-shadow: 0px 2px 4px var(--GrayishBlue);
 }
 
 .contact__section .error.icon {
@@ -150,17 +181,17 @@ ul, li {
   right: 4%;
 }
 
-.para.secondary,
-.tertiary {
-  color: var(--White);
+.contact__group input {
+  outline: none !important;
 }
 
-.contact__group {
-  background-color: var(--SoftRed);
+.contact__group input,
+.btn-danger {
+  height: 36px;
 }
 
-.contact__group em {
-  color: var(--White);
+.contact__group.validated {
+  background-color: var(--SoftGreen);
 }
 
 :where(.email__group, .password__group) .error.icon {
@@ -175,15 +206,6 @@ ul, li {
 
 .footer {
   background-color: var(--VeryDarkBlue);
-}
-
-.footer .link {
-  text-decoration: none;
-  color: var(--White);
-}
-
-.footer .link:hover {
-  color: var(--SoftRed);
 }
 
 .social.icon:hover {

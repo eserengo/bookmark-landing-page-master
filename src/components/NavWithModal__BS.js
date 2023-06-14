@@ -34,7 +34,7 @@ const NavWithModal = () => {
                 <ReactBootstrap.Modal.Title><Logo /></ReactBootstrap.Modal.Title>
                 <ReactBootstrap.Image className='icon' alt='close icon' src='./src/images/icon-close.svg' onClick={toggleModal} />
               </ReactBootstrap.Modal.Header>
-              <ReactBootstrap.Modal.Body>
+              <ReactBootstrap.Modal.Body className='mt-3'>
                 <ReactBootstrap.Nav.Item as='ul' className='d-flex flex-column justify-content-center align-items-center m-0 p-0'>
                   <List target={routes} hash='routes__1' BS__options='text-uppercase p-2' />
                 </ReactBootstrap.Nav.Item>
@@ -42,7 +42,7 @@ const NavWithModal = () => {
             </ReactBootstrap.Modal.Dialog>
         }
       </ReactBootstrap.Nav>
-      <ReactBootstrap.Nav className='d-none d-sm-flex justify-content-between align-items-center'>
+      <ReactBootstrap.Nav className='d-none d-sm-flex justify-content-between align-items-center py-3 px-5'>
         <Logo />
         <ReactBootstrap.Nav.Item as='ul' className='d-inline-flex align-items-center m-0 p-0'>
           <List target={routes} hash='routes__2' BS__options='text-uppercase p-2' />

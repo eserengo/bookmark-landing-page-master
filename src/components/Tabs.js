@@ -1,14 +1,14 @@
-import Button from "./Button";
+import Button from './Button';
 
 const Tabs = () => {
   const [key, setKey] = React.useState('bookmarking');
 
   const CreateTab = ({ props }) => (
     <div className='d-flex flex-column flex-sm-row justify-content-between align-items-center'>
-      <div className="col-12 col-sm-6">
+      <div className='col-12 col-sm-6 py-4 px-2'>
         <ReactBootstrap.Image className='tab__img' alt={props.alt} src={props.src} />
       </div>
-      <div className="col-12 col-sm-6">
+      <div className='col-12 col-sm-6 py-4 px-2 text-center text-sm-start ms-sm-4'>
         <h2 className='title secondary'>{props.title}</h2>
         <p className='para'>{props.para}</p>
         <Button variant='primary' className='d-none d-sm-block' content='More Info' />
@@ -38,7 +38,7 @@ const Tabs = () => {
   };
 
   return (
-    <ReactBootstrap.Tabs id='tabs' activeKey={key} onSelect={(k) => setKey(k)}>
+    <ReactBootstrap.Tabs id='tabs' className='border-0 flex-column align-items-center justify-content-center flex-sm-row' activeKey={key} onSelect={(k) => setKey(k)}>
       <ReactBootstrap.Tab eventKey='bookmarking' title='Simple Bookmarking'>
         <CreateTab props={bookmarking} />
       </ReactBootstrap.Tab>

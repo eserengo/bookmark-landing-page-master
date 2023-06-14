@@ -20,10 +20,10 @@ const FooterNav = () => {
   );
 
   return (
-    <footer className='footer'>
+    <footer className='footer py-5 px-sm-5 py-sm-2'>
       <ReactBootstrap.Nav className='d-flex flex-column flex-sm-row justify-content-between align-items-center'>
         <Logo />
-        <ReactBootstrap.Nav.Item as='ul' className='d-inline-flex flex-column flex-sm-row align-items-center m-0 p-0'>
+        <ReactBootstrap.Nav.Item as='ul' className='d-inline-flex flex-column flex-sm-row align-items-center m-0 px-0 py-4 px-sm-4 py-sm-0'>
           <List target={routes} hash='footer__routes' BS__options='text-uppercase p-2' />
         </ReactBootstrap.Nav.Item>
         <ReactBootstrap.Nav.Item as='ul' className='d-inline-flex flex-row align-items-center m-0 p-0'>
